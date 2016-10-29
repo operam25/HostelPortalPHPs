@@ -26,11 +26,14 @@ if(!$con){
 
 	$qury = "SELECT * FROM user_info where admissionnumber = '$admissionnumber'";
 
-	$result = mysqli_query($con,$qury);
+	$reslt = mysqli_query($con,$qury);
 
-	if(mysqli_num_rows($result) >= 1){
+	if(mysqli_num_rows($reslt) >= 1){
+
 		$res->status = "User is already registered";
+
 	}else{
+		
 		$query = $query = "INSERT INTO `user_info` (`name`, `email`, `admissionnumber`, `contactnumber`, `password`) VALUES('$name','$email','$admissionnumber','$contactnumber','$password')";
 
 		$result = mysqli_query($con,$query);
