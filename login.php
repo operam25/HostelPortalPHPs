@@ -32,7 +32,7 @@ if(!$con){
 
 		$res->status = "success";
 		$row = mysqli_fetch_array($result);
-		$res->msg = array("name" => $row[1], "email" => $row[3], "admissionnumber" => $row[0], "contactnumber" => $row[4],);
+		$res->msg = array("name" => $row[1], "email" => $row[3], "admissionnumber" => $row[0], "contactnumber" => $row[4]);
 		
 	}else{
 		$res->status = "Admission Number or Password is incorrect.";

@@ -34,7 +34,7 @@ if(!$con){
 
 	}else{
 		
-		$query = $query = "INSERT INTO `user_info` (`name`, `email`, `admissionnumber`, `contactnumber`, `password`) VALUES('$name','$email','$admissionnumber','$contactnumber','$password')";
+		$query = "INSERT INTO `user_info` (`name`, `email`, `admissionnumber`, `contactnumber`, `password`) VALUES('$name','$email','$admissionnumber','$contactnumber','$password')";
 
 		$result = mysqli_query($con,$query);
 
