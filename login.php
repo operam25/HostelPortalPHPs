@@ -2,9 +2,14 @@
  
 error_reporting(0);
  
-$db_name = $_POST["username"];
+// $db_name = $_POST["username"];
+// $mysql_user = "root";
+// $mysql_pass = $_POST["apikey"];
+// $server_name = "localhost";
+
+$db_name = "HostelPortal";
 $mysql_user = "root";
-$mysql_pass = $_POST["apikey"];
+$mysql_pass = "gta114tarun";
 $server_name = "localhost";
 
 $con = mysqli_connect($server_name, $mysql_user, $mysql_pass, $db_name);
@@ -21,6 +26,7 @@ if(!$con){
 
 	$admissionnumber = $_POST["admissionnumber"];
 	$password = sha1($_POST["password"]);
+	echo json_encode($admissionnumber);
 
 	$query = "SELECT * FROM user_info where admissionnumber = '$admissionnumber' AND password = '$password'";
 
